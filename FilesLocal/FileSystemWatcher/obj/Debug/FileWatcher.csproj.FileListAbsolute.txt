@@ -1,0 +1,13 @@
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\FileSystemWatcher.exe.config
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\FileSystemWatcher.exe
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\FileSystemWatcher.pdb
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\Data.dll
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\EntityFramework.dll
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\Data.pdb
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\Data.dll.config
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\bin\Debug\EntityFramework.xml
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\obj\Debug\FileWatcher.csprojAssemblyReference.cache
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\obj\Debug\FileWatcher.csproj.CoreCompileInputs.cache
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\obj\Debug\FileWatcher.csproj.CopyComplete
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\obj\Debug\FileSystemWatcher.exe
+C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\FileSystemWatcher\obj\Debug\FileSystemWatcher.pdb

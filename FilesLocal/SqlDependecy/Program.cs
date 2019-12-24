@@ -18,7 +18,6 @@ namespace SqlDependecy
     {
         static void Main(string[] args)
         {
-
             var connectionString = "Data Source=LSTK231278\\SQLEXPRESS;Initial Catalog=Practica; Integrated Security=True";
             using (var tableDependency = new SqlTableDependency<Student>(connectionString, "Students"))
             {
@@ -31,13 +30,13 @@ namespace SqlDependecy
                 Console.ReadKey();
                 tableDependency.Stop();
             }
-            
+
         }
 
 
         static void TableDependency_Changed(object sender, RecordChangedEventArgs<Student> e)
         {
-            
+
             Console.WriteLine(Environment.NewLine);
 
             //Si hubo un cambio en la tabla
@@ -55,10 +54,10 @@ namespace SqlDependecy
                 {
 
                     List<Student> ListaStudents = new List<Student>();
-                    if (File.Exists(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml"))
+                    if (File.Exists(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml"))
                     {
                         XmlDocument Doc = new XmlDocument();
-                        Doc.Load(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
+                        Doc.Load(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
                         ListaStudents.AddRange(DeserializeFromXml<List<Student>>(Doc.OuterXml));
                     }
 
@@ -68,17 +67,17 @@ namespace SqlDependecy
                         Name = changedEntity.Name,
                         Surname = changedEntity.Surname
                     };
-                    
+
                     ListaStudents.Add(st);
-                    SerializeToXml<List<Student>>(ListaStudents, @"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
-                    
+                    SerializeToXml<List<Student>>(ListaStudents, @"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
+
                 }
 
                 //Si es Delete
                 if (e.ChangeType.ToString() == "Delete")
                 {
-                    XElement Doc = XElement.Load(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
-                    
+                    XElement Doc = XElement.Load(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
+
                     foreach (XNode item in Doc.Nodes())
                     {
                         var idAttribute = ((XElement)item).Attributes("Id").FirstOrDefault().Value;
@@ -87,16 +86,16 @@ namespace SqlDependecy
                         {
                             //Console.WriteLine(item);
                             item.Remove();
-                            Doc.Save(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
+                            Doc.Save(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
                         }
                     }
                 }
 
 
                 //Si es Update
-                if(e.ChangeType.ToString() == "Update")
+                if (e.ChangeType.ToString() == "Update")
                 {
-                    XElement Doc = XElement.Load(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
+                    XElement Doc = XElement.Load(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
 
                     foreach (XElement item in Doc.Nodes())
                     {
@@ -107,8 +106,8 @@ namespace SqlDependecy
                             item.SetElementValue("Name", changedEntity.Name.ToString());
                             item.SetElementValue("Surname", changedEntity.Surname.ToString());
                             //item.ReplaceWith(changedEntity.Name, changedEntity.Surname);
-                            
-                            Doc.Save(@"C:\Users\Curso\source\repos\FilesLocal\xml\archivo.xml");
+
+                            Doc.Save(@"C:\Users\Curso\source\repos\Sofftek Projects\Projects\FilesLocal\xml\archivo.xml");
                         }
                     }
                 }
@@ -123,38 +122,6 @@ namespace SqlDependecy
         //{
         //    Exception ex = e.Error;
         //    throw ex;
-        //}
-
-
-
-
-
-        //public static T DeserializeFromXml<T>(string xml)
-        //{
-        //    T result;
-        //    XmlSerializer ser = new XmlSerializer(typeof(T));
-        //    using (TextReader tr = new StringReader(xml))
-        //    {
-        //        result = (T)ser.Deserialize(tr);
-        //    }
-        //    return result;
-        //}
-
-
-        //public void SerializeToXml<T>(T obj, string fileName)
-        //{
-        //    XmlSerializer ser = new XmlSerializer(typeof(T));
-
-        //    //Create a FileStream object connected to the target file 
-
-        //    FileStream fileStream = new FileStream(fileName, FileMode.Create);
-
-        //    ser.Serialize(fileStream, obj);
-
-        //    fileStream.Close();
-
-        //    //MessageBox.Show(this, "Archivo creado correctamente", "Mensaje");
-
         //}
 
 

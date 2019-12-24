@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlDependecy", "SqlDependec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{0F06628A-735D-42D6-8FF6-4D60EB17775C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWatcher", "FileSystemWatcher\FileWatcher.csproj", "{DD42FEDA-4156-4554-B2B8-F4A48235215B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0F06628A-735D-42D6-8FF6-4D60EB17775C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F06628A-735D-42D6-8FF6-4D60EB17775C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F06628A-735D-42D6-8FF6-4D60EB17775C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD42FEDA-4156-4554-B2B8-F4A48235215B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD42FEDA-4156-4554-B2B8-F4A48235215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD42FEDA-4156-4554-B2B8-F4A48235215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD42FEDA-4156-4554-B2B8-F4A48235215B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
